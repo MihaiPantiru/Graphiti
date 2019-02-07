@@ -9,11 +9,11 @@ let package = Package(
     ],
 
     dependencies: [
+        .package(url: "https://github.com/MihaiPantiru/GraphQL.git", from: "0.8.0"),
     ],
 
     targets: [
-        .target(name: "Graphiti", dependencies: []),
-        
+        .target(name: "Graphiti", dependencies: ["GraphQL"]),
         .testTarget(name: "GraphitiTests", dependencies: ["Graphiti"]),
     ]
 )
